@@ -26,7 +26,8 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       }
     );
     const data = await response.json();
-    dispatch(setPosts({ posts: data }));
+    const newData = await data.reverse()
+    dispatch(setPosts({ posts: newData }));
   };
 
   useEffect(() => {
