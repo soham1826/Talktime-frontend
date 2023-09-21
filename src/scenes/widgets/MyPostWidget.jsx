@@ -52,7 +52,8 @@ const MyPostWidget = ({ picturePath }) => {
       body: formData,
     });
     const posts = await response.json();
-    dispatch(setPosts({ posts }));
+    const newPosts = await posts.reverse()
+    dispatch(setPosts({ newPosts }));
     setImage(null);
     setPost("");
   };
