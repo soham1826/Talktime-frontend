@@ -26,7 +26,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
       }
     );
     const data = await response.json();
-    dispatch(setPosts({ posts: data }));
+    dispatch(setPosts({ posts: data.reverse() }));
   };
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   return (
     <>
-      {posts.reverse().map(
+      {posts.map(
         ({
           _id,
           userId,
