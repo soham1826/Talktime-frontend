@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Talktime
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
